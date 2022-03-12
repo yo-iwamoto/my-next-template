@@ -5,7 +5,7 @@ const createJestConfig = nextJest({
 });
 
 module.exports = createJestConfig({
-  moduleDirectories: ['node_modules', '<rootDir>/'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
