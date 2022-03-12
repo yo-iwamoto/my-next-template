@@ -21,6 +21,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': 'off',
+    'import/no-extraneous-dependencies': 'off', // for the conflict with jest
 
     // custom
     'import/order': [
