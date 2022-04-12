@@ -16,11 +16,11 @@ up-dev-d: # start dev container in detached mode
 	docker-compose -f docker/dev/docker-compose.yml up -d
 
 .PHONY: up-dev-b
-up-dev: # start dev container after build it
+up-dev-b: # start dev container after build it
 	docker-compose -f docker/dev/docker-compose.yml up --build
 
 .PHONY: up-dev-bd
-up-dev-d: # start dev container in detached mode after build it
+up-dev-bd: # start dev container in detached mode after build it
 	docker-compose -f docker/dev/docker-compose.yml up -d --build
 
 .PHONY: down-dev
@@ -45,11 +45,11 @@ up-production-d: # start production container in detached mode
 	docker-compose -f docker/production/docker-compose.yml up -d
 
 .PHONY: up-production-b
-up-production-d: # start production container after build it
+up-production-b: # start production container after build it
 	docker-compose -f docker/production/docker-compose.yml up --build
 
 .PHONY: up-production-bd
-up-production-d: # start production container in detached mode after build it
+up-production-bd: # start production container in detached mode after build it
 	docker-compose -f docker/production/docker-compose.yml up -d --build
 
 .PHONY: down-production
