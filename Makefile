@@ -14,6 +14,14 @@ up-dev:
 up-dev-d:
 	docker-compose -f docker/dev/docker-compose.yml up -d
 
+.PHONY: up-dev-b
+up-dev:
+	docker-compose -f docker/dev/docker-compose.yml up --build
+
+.PHONY: up-dev-bd
+up-dev-d:
+	docker-compose -f docker/dev/docker-compose.yml up -d --build
+
 .PHONY: down-dev
 down-dev:
 	docker-compose -f docker/dev/docker-compose.yml down
@@ -33,6 +41,13 @@ up-production:
 .PHONY: up-production-d
 up-production-d:
 	docker-compose -f docker/production/docker-compose.yml up -d
+
+.PHONY: up-production-b
+up-production-d:
+	docker-compose -f docker/production/docker-compose.yml up --build
+.PHONY: up-production-bd
+up-production-d:
+	docker-compose -f docker/production/docker-compose.yml up -d --build
 
 .PHONY: down-production
 down-production:
