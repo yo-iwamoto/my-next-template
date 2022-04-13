@@ -1,8 +1,6 @@
 ## 概要
 個人的な Next.js アプリケーションのテンプレートです．
 
-platform 指定があるため，Intel Mac でコンテナがビルドできません．
-
 ## 開発サーバー起動
 ```
 $ docker-compose -f docker/dev/docker-compose.yml up --build
