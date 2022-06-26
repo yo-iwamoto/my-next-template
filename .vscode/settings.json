@@ -6,6 +6,9 @@
     "source.fixAll.eslint": true
   },
   "eslint.validate": ["typescript", "typescriptreact"],
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
   "files.exclude": {
     "**/__snapshots__": true
   }
