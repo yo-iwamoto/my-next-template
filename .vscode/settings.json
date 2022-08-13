@@ -5,8 +5,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["typescript", "typescriptreact"],
-  "files.exclude": {
-    "**/__snapshots__": true
-  }
+  "eslint.validate": ["typescript", "typescriptreact"]
 }

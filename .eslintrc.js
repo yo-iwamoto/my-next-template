@@ -1,3 +1,4 @@
+/** @type{import('eslint').ESLint.ConfigData} */
 module.exports = {
   env: {
     node: true,
@@ -14,6 +15,7 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'react/react-in-jsx-scope': 'off',
     /**
      * custom
      */
@@ -25,6 +27,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: ['./tsconfig.json'],
     tsconfigRootDir: '.',
   },
   settings: {

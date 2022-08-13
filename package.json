@@ -2,7 +2,7 @@
   "name": "my-next-template",
   "license": "MIT",
   "scripts": {
-    "dev": "run-p dev:*",
+    "dev": "run-p dev:'*'",
     "dev:next": "next dev",
     "dev:path": "pathpida --enableStatic --watch",
     "build": "pathpida --enableStatic && next build",
