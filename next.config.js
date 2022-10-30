@@ -4,7 +4,5 @@
 module.exports = {
   pageExtensions: ['page.tsx', 'handler.ts'],
   swcMinify: true,
-  experimental: {
-    outputStandalone: true,
-  },
+  output: 'standalone',
 };
