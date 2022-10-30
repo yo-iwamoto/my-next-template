@@ -1,7 +1,7 @@
-import type { ReactNode, VFC } from 'react';
+import type { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
 };
 
-export const Layout: VFC<Props> = ({ children }) => <div>{children}</div>;
+export const Layout = ({ children }: Props) => <div>{children}</div>;

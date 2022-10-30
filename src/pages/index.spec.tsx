@@ -1,10 +1,10 @@
 import Page from './index.page';
-import { renderNextPage } from '@/__tests__/util';
+import { render } from '@testing-library/react';
 
 describe('[page] /', () => {
-  it('renders / unchanged', () => {
-    const { container } = renderNextPage(<Page />);
+  it('snapshot', () => {
+    const { asFragment } = render(<Page />);
 
-    expect(container).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
