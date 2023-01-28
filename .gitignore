@@ -6,5 +6,3 @@ public/*.js
 public/*.map
 .env
 cypress/screenshots
-.yarn/*
-!.yarn/releases

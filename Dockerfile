@@ -3,8 +3,8 @@
 FROM node:16-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --production --frozen-lockfile
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --production --frozen-lockfile
 
 # ==================================================
 # Build Layer - only when needed
@@ -13,7 +13,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN yarn build
+RUN pnpm build
 
 # ==================================================
 # Production Layer
