@@ -24,7 +24,7 @@ specifiers:
   lint-staged: ^12.4.1
   next: ^12.3.0
   npm-run-all: ^4.1.5
-  pathpida: ^0.18.0
+  pathpida: ^0.20.0
   postcss: ^8.4.8
   prettier: ^2.5.1
   prettier-plugin-tailwindcss: ^0.1.8
@@ -68,7 +68,7 @@ devDependencies:
   jsdom: 20.0.1
   lint-staged: 12.4.1
   npm-run-all: 4.1.5
-  pathpida: 0.18.0
+  pathpida: 0.20.1
   postcss: 8.4.18
   prettier: 2.5.1
   prettier-plugin-tailwindcss: 0.1.8_prettier@2.5.1
@@ -1124,7 +1124,7 @@ packages:
       '@types/minimist': 1.2.2
       chokidar: 3.5.3
       form-data: 4.0.0
-      minimist: 1.2.5
+      minimist: 1.2.7
     dev: false
 
   /assertion-error/1.1.0:
@@ -1526,7 +1526,7 @@ packages:
     dependencies:
       acorn-node: 1.8.2
       defined: 1.0.0
-      minimist: 1.2.5
+      minimist: 1.2.7
     dev: true
 
   /didyoumean/1.2.2:
@@ -2831,7 +2831,7 @@ packages:
     resolution: {integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==}
     hasBin: true
     dependencies:
-      minimist: 1.2.5
+      minimist: 1.2.7
     dev: true
 
   /json5/2.2.1:
@@ -3045,8 +3045,8 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimist/1.2.5:
-    resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
+  /minimist/1.2.7:
+    resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
 
   /mrmime/1.0.1:
     resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
@@ -3364,13 +3364,13 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /pathpida/0.18.0:
-    resolution: {integrity: sha512-ZSLERfsrB7R/aVFmzEOlQ1c7P+cPTIjqQIYgwXprTonnBCL52ZG4KcuDBWvXIWWOJSJwiR55sIXY0/7CHAhQ7w==}
+  /pathpida/0.20.1:
+    resolution: {integrity: sha512-kHP27AIgeS3AqPTug9FLwQ/VpPkwjMv+TgMgpePeLKj/gMyY6h8/gRtAsWjTwzDV92LtHnbMSy3V12jQ/xVBeg==}
     hasBin: true
     dependencies:
       chokidar: 3.5.3
       ignore: 5.2.0
-      minimist: 1.2.5
+      minimist: 1.2.7
     dev: true
 
   /pathval/1.1.1:
@@ -4112,7 +4112,7 @@ packages:
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.1
-      minimist: 1.2.5
+      minimist: 1.2.7
       strip-bom: 3.0.0
     dev: true
 
