@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "eslint --fix src/**/*.{ts,tsx}",
     "format": "prettier --write src",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^13.2.4",
