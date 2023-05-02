@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
+import '@/styles/global.css';
 
 export const metadata = {
   title: 'Next.js',
