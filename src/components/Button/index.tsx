@@ -7,7 +7,7 @@ export const Button = ({ children, className, ...props }: Props) => (
   <button
     {...props}
     className={cn(
-      'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded',
+      'rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700',
       className
     )}
   >
