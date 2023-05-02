@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`/ Page Component > renders correctly 1`] = `
-<DocumentFragment>
-  <h1>
-    Hello world
-  </h1>
-</DocumentFragment>
-`;
