@@ -1,12 +1,14 @@
 FROM node:18-alpine AS base
 
+RUN npm i -g pnpm
+
 # ==================================================
 # Deps-install Layer - only when needed
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --production --frozen-lockfile
+RUN pnpm i --frozen-lockfile
 
 # ==================================================
 # Build Layer - only when needed
