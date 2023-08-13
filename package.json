@@ -30,7 +30,7 @@
     "@storybook/nextjs": "^7.0.18",
     "@storybook/react": "^7.0.18",
     "@storybook/testing-library": "^0.1.0",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
