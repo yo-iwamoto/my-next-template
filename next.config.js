@@ -3,7 +3,7 @@
  */
 module.exports = {
   swcMinify: true,
-  output: 'standalone',
+  output: "standalone",
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
