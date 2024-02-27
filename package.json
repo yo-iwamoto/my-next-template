@@ -1,6 +1,10 @@
 {
   "name": "my-next-template",
   "license": "MIT",
+  "engines": {
+    "node": "^20.10.0",
+    "pnpm": "^8.15.1"
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
