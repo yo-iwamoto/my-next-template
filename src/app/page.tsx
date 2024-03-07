@@ -1,3 +1,7 @@
+"use client";
+
+import { Button } from "smarthr-ui";
+
 export default function Page() {
-  return <h1>Page</h1>;
+  return <Button>Hello SmartHR UI</Button>;
 }

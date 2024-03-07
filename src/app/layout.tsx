@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
-import "@/styles/global.css";
+import { ClientProvider } from "./provider";
+import "smarthr-ui/smarthr-ui.css";
 
 export const metadata = {
   title: "Next.js",
@@ -10,7 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <ClientProvider>{children}</ClientProvider>
+      </body>
     </html>
   );
 }
