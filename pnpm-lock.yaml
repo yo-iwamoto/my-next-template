@@ -92,8 +92,11 @@ devDependencies:
     specifier: 24.0.0
     version: 24.0.0
   postcss:
-    specifier: 8.4.32
-    version: 8.4.32
+    specifier: 8.4.35
+    version: 8.4.35
+  prisma:
+    specifier: 5.10.2
+    version: 5.10.2
   storybook:
     specifier: 7.6.17
     version: 7.6.17
