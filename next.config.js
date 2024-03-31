@@ -12,4 +12,9 @@ module.exports = {
     typedRoutes: true,
     turbo: true,
   },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
 };
