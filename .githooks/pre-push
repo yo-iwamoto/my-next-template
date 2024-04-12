@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pnpm typecheck
+pnpm check

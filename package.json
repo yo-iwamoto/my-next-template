@@ -3,9 +3,9 @@
   "license": "MIT",
   "packageManager": "pnpm@8.15.6",
   "scripts": {
-    "postinstall": "pnpm prisma:generate",
+    "prepare": "git config core.hooksPath .githooks",
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm prisma:generate && next build",
     "start": "next start",
     "check": "biome check .",
     "check:apply": "biome check --apply .",
