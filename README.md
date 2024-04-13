@@ -1,8 +1,8 @@
-# 概要
+# yo-iwamoto/my-next-template
 
 My personal boilerplate for Next.js.
 
-# 構成要素
+# Stack
 
 - Next.js
   - App Router
