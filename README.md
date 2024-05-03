@@ -17,3 +17,12 @@ My personal boilerplate for Next.js.
 - Tailwind CSS
 - Prisma
 - CI
+
+# Setup
+
+```zsh
+nodenv install --skip-existing && \
+  corepack enable && \
+  corepack prepare --activate && \
+  nodenv rehash
+```
