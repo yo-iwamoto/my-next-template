@@ -1,24 +1,24 @@
 import { cache } from "react";
-import { z } from "zod";
+import * as v from "valibot";
 
-const serverSideEnvSchema = z.object({
-  // API_TOKEN: z.string(),
+const serverSideEnvSchema = v.object({
+  // API_TOKEN: v.string(),
 });
 
 function getServerSideEnvFn() {
-  return serverSideEnvSchema.parse({
+  return v.parse(serverSideEnvSchema, {
     // API_TOKEN: process.env.API_TOKEN,
   });
 }
 
 export const getServerSideEnv = cache(getServerSideEnvFn);
 
-const clientSideEnvSchema = z.object({
-  // NEXT_PUBLIC_API_URL: z.string(),
+const clientSideEnvSchema = v.object({
+  // NEXT_PUBLIC_API_URL: v.string(),
 });
 
 export function getClientSideEnv() {
-  return clientSideEnvSchema.parse({
+  return v.parse(clientSideEnvSchema, {
     // NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
   });
 }
