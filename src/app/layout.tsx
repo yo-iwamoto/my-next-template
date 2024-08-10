@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 import "@/styles/global.css";
 
-export const generateMetadata = {
+export const metadata = {
   robots: {
     index: false,
     follow: false,
