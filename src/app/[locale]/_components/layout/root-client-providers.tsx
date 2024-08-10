@@ -1,5 +1,5 @@
-import type { PropsWithChildren } from "react";
 import { ThemeProvider } from "next-themes";
+import type { PropsWithChildren } from "react";
 
 type Props = PropsWithChildren;
 
