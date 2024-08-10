@@ -21,8 +21,5 @@ My personal boilerplate for Next.js.
 # Setup
 
 ```zsh
-nodenv install --skip-existing && \
-  corepack enable && \
-  corepack prepare --activate && \
-  nodenv rehash
+make init
 ```
