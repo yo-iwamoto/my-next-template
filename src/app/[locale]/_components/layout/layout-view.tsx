@@ -1,0 +1,56 @@
+import { Container } from "@/components/container";
+import { Link } from "@/lib/navigation";
+import type { PropsWithChildren } from "react";
+import { LocaleSwitcher } from "./locale-switcher";
+import { UserIcon } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+type Props = PropsWithChildren<{
+  locale: string;
+}>;
+
+export function LayoutView({ children, locale }: Props) {
+  return (
+    <Container>
+      <div className="fixed top-0 left-0 right-0 z-30 bg-background/50 backdrop-blur-md">
+        <header className="flex justify-between items-center px-4 py-2 max-w-5xl mx-auto">
+          <Link
+            href="/"
+            className="font-semibold text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background rounded-md"
+          >
+            my-next-template
+          </Link>
+
+          <div className="flex gap-3 items-center">
+            <LocaleSwitcher defaultLocale={locale} />
+
+            {/* <ThemeSwitcher /> */}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className="grid place-items-center p-1 h-10 w-10 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white"
+                >
+                  <UserIcon />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>XXX</DropdownMenuItem>
+                <DropdownMenuItem>YYY</DropdownMenuItem>
+                <DropdownMenuItem>ZZZ</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </header>
+      </div>
+
+      {children}
+    </Container>
+  );
+}
