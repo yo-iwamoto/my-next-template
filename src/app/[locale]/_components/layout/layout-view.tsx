@@ -1,14 +1,14 @@
 import { Container } from "@/components/container";
-import { Link } from "@/lib/navigation";
-import type { PropsWithChildren } from "react";
-import { LocaleSwitcher } from "./locale-switcher";
-import { UserIcon } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Link } from "@/lib/navigation";
+import { UserIcon } from "lucide-react";
+import type { PropsWithChildren } from "react";
+import { LocaleSwitcher } from "./locale-switcher";
 
 type Props = PropsWithChildren<{
   locale: string;
