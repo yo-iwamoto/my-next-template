@@ -4,5 +4,11 @@
   },
   "locale": {
     "switch-locale": "Switch locale"
+  },
+  "theme": {
+    "switch-theme": "Switch theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }

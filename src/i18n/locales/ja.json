@@ -4,5 +4,11 @@
   },
   "locale": {
     "switch-locale": "表示言語を切り替える"
+  },
+  "theme": {
+    "switch-theme": "テーマを切り替える",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
   }
 }

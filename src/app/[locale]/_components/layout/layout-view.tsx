@@ -9,6 +9,7 @@ import { Link } from "@/lib/navigation";
 import { UserIcon } from "lucide-react";
 import type { PropsWithChildren } from "react";
 import { LocaleSwitcher } from "./locale-switcher";
+import { ThemeSwitcher } from "./theme-switcher";
 
 type Props = PropsWithChildren<{
   locale: string;
@@ -29,7 +30,7 @@ export function LayoutView({ children, locale }: Props) {
           <div className="flex gap-3 items-center">
             <LocaleSwitcher defaultLocale={locale} />
 
-            {/* <ThemeSwitcher /> */}
+            <ThemeSwitcher />
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
