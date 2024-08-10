@@ -9,5 +9,9 @@ type Props = {
 export default function Page({ params: { locale } }: Props) {
   initializeLocale(locale);
 
-  return <h1>Page</h1>;
+  return (
+    <main className="container">
+      <h1 className="font-bold text-xl">Page</h1>
+    </main>
+  );
 }

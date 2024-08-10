@@ -1,4 +1,3 @@
-import { Container } from "@/components/container";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,9 +16,9 @@ type Props = PropsWithChildren<{
 
 export function LayoutView({ children, locale }: Props) {
   return (
-    <Container>
+    <div className="pt-14 min-h-[100dvh] grid">
       <div className="fixed top-0 left-0 right-0 z-30 bg-background/50 backdrop-blur-md">
-        <header className="flex justify-between items-center px-4 py-2 max-w-5xl mx-auto">
+        <header className="flex justify-between items-center py-2 container">
           <Link
             href="/"
             className="font-semibold text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background rounded-md"
@@ -52,6 +51,6 @@ export function LayoutView({ children, locale }: Props) {
       </div>
 
       {children}
-    </Container>
+    </div>
   );
 }
