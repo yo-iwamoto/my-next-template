@@ -1,4 +1,4 @@
-FROM node:20.11.1-alpine AS base
+FROM node:22.9.0-alpine AS base
 
 # ==================================================
 # Deps-install Layer - only when needed
