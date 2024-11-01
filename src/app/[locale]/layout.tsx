@@ -2,7 +2,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { I18nClientProvider } from "@/i18n/client-provider";
 import { initializeLocale } from "@/i18n/initialize-locale";
 import { locales } from "@/i18n/locales/list";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 import { getTranslations } from "next-intl/server";
 import type { PropsWithChildren } from "react";
 import { LayoutView } from "./_components/layout/layout-view";
