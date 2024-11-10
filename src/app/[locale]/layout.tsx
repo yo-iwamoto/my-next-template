@@ -13,12 +13,13 @@ export function generateStaticParams() {
 }
 
 type Props = PropsWithChildren<{
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }>;
 
-export async function generateMetadata({ params: { locale } }: Props) {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
   const t = await getTranslations("metadata");
 
   return {
@@ -28,7 +29,8 @@ export async function generateMetadata({ params: { locale } }: Props) {
   } satisfies Metadata;
 }
 
-export default function Layout({ children, params: { locale } }: Props) {
+export default async function Layout({ children, params }: Props) {
+  const { locale } = await params;
   initializeLocale(locale);
 
   return (

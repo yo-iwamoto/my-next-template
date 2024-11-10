@@ -1,12 +1,13 @@
 import { initializeLocale } from "@/i18n/initialize-locale";
 
 type Props = {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 };
 
-export default function Page({ params: { locale } }: Props) {
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
   initializeLocale(locale);
 
   return (
