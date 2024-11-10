@@ -6,7 +6,6 @@ import {
   Select,
   SelectContent,
   SelectItem,
-  SelectOverlay,
   SelectTrigger,
 } from "@/components/ui/select";
 import { useSwitchLocale } from "@/i18n/use-switch-locale";
@@ -44,10 +43,7 @@ export function LocaleSwitcher({ defaultLocale }: Props) {
         </SelectTrigger>
       </HoverTooltip>
 
-      <SelectContent
-        align="end"
-        overlay={<SelectOverlay open={isSelectOpen} />}
-      >
+      <SelectContent align="end">
         <SelectItem value="ja">日本語</SelectItem>
         <SelectItem value="en">English</SelectItem>
       </SelectContent>
