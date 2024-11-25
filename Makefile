@@ -4,4 +4,5 @@ init:
 	corepack enable
 	corepack prepare --activate
 	nodenv rehash
+	pnpm i
 	pnpm prisma:generate
