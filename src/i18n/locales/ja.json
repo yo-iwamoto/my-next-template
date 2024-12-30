@@ -10,5 +10,8 @@
     "light": "ライト",
     "dark": "ダーク",
     "system": "システム"
+  },
+  "top-page": {
+    "tagline": "こんにちは、世界"
   }
 }

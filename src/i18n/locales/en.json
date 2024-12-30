@@ -10,5 +10,8 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System"
+  },
+  "top-page": {
+    "tagline": "Hello world"
   }
 }

@@ -41,9 +41,9 @@ export function LayoutView({ children, locale }: Props) {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem>XXX</DropdownMenuItem>
-                <DropdownMenuItem>YYY</DropdownMenuItem>
-                <DropdownMenuItem>ZZZ</DropdownMenuItem>
+                <DropdownMenuItem>foo</DropdownMenuItem>
+                <DropdownMenuItem>bar</DropdownMenuItem>
+                <DropdownMenuItem>baz</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

@@ -1,4 +1,5 @@
 import { initializeLocale } from "@/i18n/initialize-locale";
+import { TopPage } from "./_components/top-page";
 
 type Props = {
   params: Promise<{
@@ -10,9 +11,5 @@ export default async function Page({ params }: Props) {
   const { locale } = await params;
   initializeLocale(locale);
 
-  return (
-    <main className="container">
-      <h1 className="font-bold text-xl">Page</h1>
-    </main>
-  );
+  return <TopPage />;
 }
