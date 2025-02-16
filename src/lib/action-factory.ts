@@ -1,5 +1,5 @@
 import { Prisma } from "@prisma/client";
-import * as v from "valibot";
+import type { z } from "zod";
 
 export type ActionOkResult<T> = T & { success: true };
 export type ActionErrorResult = { success: false; message: string };
@@ -18,26 +18,22 @@ export type ServerActionResult<T> = Promise<
 
 export class CatchableError extends Error {}
 
-export function buildActionFromSchema<
-  T extends v.ObjectEntries,
-  U extends v.ErrorMessage<v.ObjectIssue> | undefined,
-  V,
->(
-  formSchema: v.ObjectSchema<T, U>,
-  actionFn: (parsed: v.InferOutput<typeof formSchema>) => Promise<V>,
+export function buildActionFromSchema<T extends z.ZodRawShape, V>(
+  formSchema: z.ZodObject<T>,
+  actionFn: (parsed: z.output<typeof formSchema>) => Promise<V>,
 ) {
   return async (formData: FormData) => {
     const formObj = Object.fromEntries(formData.entries());
-    const parseResult = v.safeParse(formSchema, formObj);
+    const parseResult = formSchema.safeParse(formObj);
     if (!parseResult.success) {
-      console.error(parseResult.issues);
+      console.error(parseResult.error.issues);
       return actionErrorResult(
-        parseResult.issues.map((i) => i.message).join("\n"),
+        parseResult.error.issues.map((i) => i.message).join("\n"),
       );
     }
 
     try {
-      const result = await actionFn(parseResult.output);
+      const result = await actionFn(parseResult.data);
       return actionOkResult(result);
     } catch (err) {
       if (err instanceof Prisma.PrismaClientKnownRequestError) {
