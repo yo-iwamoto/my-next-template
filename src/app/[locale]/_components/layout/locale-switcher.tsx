@@ -34,7 +34,7 @@ export function LocaleSwitcher({ defaultLocale }: Props) {
         <SelectTrigger
           className={cn(
             "grow-0 px-2",
-            buttonVariants({ variant: "outline-solid", size: "icon" }),
+            buttonVariants({ variant: "outline", size: "icon" }),
           )}
           hideArrow
         >
