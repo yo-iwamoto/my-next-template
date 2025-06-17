@@ -16,12 +16,12 @@ type Props = PropsWithChildren<{
 
 export function LayoutView({ children, locale }: Props) {
   return (
-    <div className="pt-14 min-h-[100dvh] grid">
+    <div className="pt-14 min-h-dvh grid">
       <div className="fixed top-0 left-0 right-0 z-30 bg-background/50 backdrop-blur-md">
         <header className="flex justify-between items-center py-2 container">
           <Link
             href="/"
-            className="font-semibold text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background rounded-md"
+            className="font-semibold text-xl focus:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background rounded-md"
           >
             my-next-template
           </Link>
@@ -35,7 +35,7 @@ export function LayoutView({ children, locale }: Props) {
               <DropdownMenuTrigger asChild>
                 <button
                   type="button"
-                  className="grid place-items-center p-1 h-10 w-10 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white"
+                  className="grid place-items-center p-1 h-10 w-10 rounded-full bg-linear-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white"
                 >
                   <UserIcon />
                 </button>
