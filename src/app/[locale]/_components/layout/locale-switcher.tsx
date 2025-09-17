@@ -1,5 +1,8 @@
 "use client";
 
+import { LanguagesIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { HoverTooltip } from "@/components/ui/custom/hover-tooltip";
 import {
@@ -10,9 +13,6 @@ import {
 } from "@/components/ui/select";
 import { useSwitchLocale } from "@/i18n/use-switch-locale";
 import { cn } from "@/lib/utils";
-import { LanguagesIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
 
 type Props = {
   defaultLocale: string;

@@ -1,9 +1,9 @@
-import { useDeviceType } from "@/lib/use-device-type";
 import type {
   ComponentPropsWithoutRef,
   PropsWithChildren,
   ReactNode,
 } from "react";
+import { useDeviceType } from "@/lib/use-device-type";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
 
 type Props = PropsWithChildren<{

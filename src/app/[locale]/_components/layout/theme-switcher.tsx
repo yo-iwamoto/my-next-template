@@ -1,5 +1,9 @@
 "use client";
 
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { HoverTooltip } from "@/components/ui/custom/hover-tooltip";
 import {
@@ -8,10 +12,6 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { MoonIcon, SunIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 export function ThemeSwitcher() {
   const [hasMounted, setHasMounted] = useState(false);

@@ -1,10 +1,10 @@
+import type { Metadata } from "next/types";
+import { getTranslations } from "next-intl/server";
+import type { PropsWithChildren } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { I18nClientProvider } from "@/i18n/client-provider";
 import { initializeLocale } from "@/i18n/initialize-locale";
 import { locales } from "@/i18n/locales/list";
-import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next/types";
-import type { PropsWithChildren } from "react";
 import { LayoutView } from "./_components/layout/layout-view";
 import { RootClientProviders } from "./_components/layout/root-client-providers";
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: t("title"),
-    // @ts-ignore
+    // @ts-expect-error
     locale,
   } satisfies Metadata;
 }

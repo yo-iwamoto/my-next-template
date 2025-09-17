@@ -1,5 +1,5 @@
-import intlMiddleware from "next-intl/middleware";
 import type { NextMiddleware } from "next/server";
+import intlMiddleware from "next-intl/middleware";
 import { locales } from "./i18n/locales/list";
 
 export const config = {
