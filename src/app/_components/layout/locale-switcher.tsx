@@ -2,7 +2,7 @@
 
 import { LanguagesIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useCallback, useState, useTransition } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { HoverTooltip } from "@/components/ui/custom/hover-tooltip";
 import {
@@ -11,8 +11,8 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { useSwitchLocale } from "@/i18n/use-switch-locale";
 import { cn } from "@/lib/utils";
+import { switchLocaleAction } from "@/server/actions/switch-locale";
 
 type Props = {
   defaultLocale: string;
@@ -49,4 +49,18 @@ export function LocaleSwitcher({ defaultLocale }: Props) {
       </SelectContent>
     </Select>
   );
+}
+
+function useSwitchLocale() {
+  const [, startTransition] = useTransition();
+
+  const switchLocale = useCallback((locale: string) => {
+    startTransition(async () => {
+      await switchLocaleAction(locale);
+    });
+  }, []);
+
+  return {
+    switchLocale,
+  };
 }
