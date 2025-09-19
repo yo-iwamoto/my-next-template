@@ -7,11 +7,7 @@ import { LayoutView } from "./_components/layout/layout-view";
 import { RootClientProviders } from "./_components/layout/root-client-providers";
 import "@/styles/global.css";
 
-type Props = PropsWithChildren<{
-  params: Promise<{
-    locale: string;
-  }>;
-}>;
+type Props = PropsWithChildren;
 
 export async function generateMetadata() {
   const locale = await getLocale();
