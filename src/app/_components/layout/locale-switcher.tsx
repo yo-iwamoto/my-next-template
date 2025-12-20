@@ -2,7 +2,9 @@
 
 import { LanguagesIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useCallback, useState, useTransition } from "react";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { HoverTooltip } from "@/components/ui/custom/hover-tooltip";
 import {
@@ -12,20 +14,21 @@ import {
   SelectTrigger,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { switchLocaleAction } from "@/server/actions/switch-locale";
 
-type Props = {
-  defaultLocale: string;
-};
-
-export function LocaleSwitcher({ defaultLocale }: Props) {
-  const { switchLocale } = useSwitchLocale();
+export function LocaleSwitcher() {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const t = useTranslations("locale");
   const [isSelectOpen, setIsSelectOpen] = useState(false);
 
+  const switchLocale = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale });
+  };
+
   return (
     <Select
-      defaultValue={defaultLocale}
+      value={locale}
       onValueChange={switchLocale}
       open={isSelectOpen}
       onOpenChange={setIsSelectOpen}
@@ -49,18 +52,4 @@ export function LocaleSwitcher({ defaultLocale }: Props) {
       </SelectContent>
     </Select>
   );
-}
-
-function useSwitchLocale() {
-  const [, startTransition] = useTransition();
-
-  const switchLocale = useCallback((locale: string) => {
-    startTransition(async () => {
-      await switchLocaleAction(locale);
-    });
-  }, []);
-
-  return {
-    switchLocale,
-  };
 }

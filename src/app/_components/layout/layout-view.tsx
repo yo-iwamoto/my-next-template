@@ -1,6 +1,5 @@
 import { UserIcon } from "lucide-react";
-import Link from "next/link";
-import { getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import type { PropsWithChildren } from "react";
 import {
   DropdownMenu,
@@ -14,8 +13,6 @@ import { ThemeSwitcher } from "./theme-switcher";
 type Props = PropsWithChildren;
 
 export async function LayoutView({ children }: Props) {
-  const locale = await getLocale();
-
   return (
     <div className="pt-14 min-h-dvh grid">
       <div className="fixed top-0 left-0 right-0 z-30 bg-background/50 backdrop-blur-md">
@@ -28,7 +25,7 @@ export async function LayoutView({ children }: Props) {
           </Link>
 
           <div className="flex gap-3 items-center">
-            <LocaleSwitcher defaultLocale={locale} />
+            <LocaleSwitcher />
 
             <ThemeSwitcher />
 
