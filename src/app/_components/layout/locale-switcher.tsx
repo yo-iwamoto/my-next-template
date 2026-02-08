@@ -1,7 +1,7 @@
 "use client";
 
 import { LanguagesIcon } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useExtracted, useLocale } from "next-intl";
 import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { HoverTooltip } from "@/components/ui/custom/hover-tooltip";
@@ -18,7 +18,7 @@ export function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const t = useTranslations("locale");
+  const t = useExtracted("locale");
   const [isSelectOpen, setIsSelectOpen] = useState(false);
 
   const switchLocale = (newLocale: string) => {
@@ -32,7 +32,7 @@ export function LocaleSwitcher() {
       open={isSelectOpen}
       onOpenChange={setIsSelectOpen}
     >
-      <HoverTooltip content={t("switch-locale")}>
+      <HoverTooltip content={t("表示言語を切り替える")}>
         <SelectTrigger
           className={cn(
             "grow-0 px-2",
@@ -40,7 +40,7 @@ export function LocaleSwitcher() {
           )}
           hideArrow
         >
-          <span className="sr-only">{t("switch-locale")}</span>
+          <span className="sr-only">{t("表示言語を切り替える")}</span>
           <LanguagesIcon className="h-[1.2rem] w-[1.2rem]" />
         </SelectTrigger>
       </HoverTooltip>

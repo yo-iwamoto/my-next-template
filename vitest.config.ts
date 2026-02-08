@@ -19,5 +19,10 @@ export default defineConfig({
     coverage: {
       reporter: ["html", "text-summary"],
     },
+    server: {
+      deps: {
+        inline: ["next-intl"],
+      },
+    },
   },
 });

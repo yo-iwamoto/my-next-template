@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin({
+  experimental: {
+    srcPath: "./src",
+    extract: {
+      sourceLocale: "ja",
+    },
+    messages: {
+      path: "./messages",
+      format: "json",
+      locales: "infer",
+    },
+  },
+});
 
 const nextConfig = {
   reactStrictMode: true,

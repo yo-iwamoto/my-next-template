@@ -1,17 +1,14 @@
 {
-  "metadata": {
-    "title": "my-next-template"
-  },
   "locale": {
-    "switch-locale": "表示言語を切り替える"
+    "G4e19w": "表示言語を切り替える"
   },
   "theme": {
-    "switch-theme": "テーマを切り替える",
-    "light": "ライト",
-    "dark": "ダーク",
-    "system": "システム"
+    "wKY4zU": "テーマを切り替える",
+    "TUhARD": "ライト",
+    "cpFVJU": "ダーク",
+    "NctqQU": "システム設定に従う"
   },
   "top-page": {
-    "tagline": "こんにちは、世界"
+    "fLPAn1": "こんにちは、世界"
   }
 }
