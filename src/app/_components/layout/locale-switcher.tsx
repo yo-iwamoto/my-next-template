@@ -1,9 +1,7 @@
 "use client";
 
 import { LanguagesIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { HoverTooltip } from "@/components/ui/custom/hover-tooltip";
@@ -13,6 +11,7 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 export function LocaleSwitcher() {

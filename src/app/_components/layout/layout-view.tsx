@@ -1,5 +1,4 @@
 import { UserIcon } from "lucide-react";
-import { Link } from "@/i18n/navigation";
 import type { PropsWithChildren } from "react";
 import {
   DropdownMenu,
@@ -7,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
 import { ThemeSwitcher } from "./theme-switcher";
 

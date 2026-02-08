@@ -9,12 +9,12 @@ describe("cn", () => {
     { args: ["text-blue-500", "text-red-500"], expected: "text-red-500" },
     { args: ["bg-blue-500", "bg-red-500"], expected: "bg-red-500" },
     { args: ["w-24", "w-32"], expected: "w-32" },
-  ])(
-    "衝突する Tailwind CSS のクラス名が後勝ちで解決されること: $args",
-    ({ args, expected }) => {
-      expect(cn(...args)).toBe(expected);
-    },
-  );
+  ])("衝突する Tailwind CSS のクラス名が後勝ちで解決されること: $args", ({
+    args,
+    expected,
+  }) => {
+    expect(cn(...args)).toBe(expected);
+  });
 
   it("falsy な値は無視されること", () => {
     expect(cn("a", false, null, 0, undefined)).toBe("a");

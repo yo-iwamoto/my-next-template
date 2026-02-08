@@ -1,6 +1,6 @@
 .PHONY: init
 init:
-	nodenv install --skip-existing
-	nodenv rehash
+	mise install
 	pnpm i
+	cp .env.example .env
 	pnpm prisma:generate
