@@ -40,7 +40,7 @@
     "@storybook/addon-links": "10.2.7",
     "@storybook/nextjs": "10.2.7",
     "@storybook/react": "10.2.7",
-    "@storybook/testing-library": "0.2.2",
+    "@storybook/test": "8.6.15",
     "@tailwindcss/postcss": "4.1.18",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
