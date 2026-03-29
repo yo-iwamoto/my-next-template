@@ -16,9 +16,8 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "incremental": false,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
     "types": ["vitest/globals"],
