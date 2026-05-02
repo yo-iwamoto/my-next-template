@@ -1,14 +1,6 @@
 {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "biomejs.biome",
-  "biome.enabled": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "eslint.validate": ["typescript", "typescriptreact"],
-  "typescript.tsdk": "node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  }
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "oxc.lint.run": "onSave",
+  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxlint": true
 }
