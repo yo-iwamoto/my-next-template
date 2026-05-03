@@ -2,7 +2,7 @@ import { Geist_Mono, Noto_Sans } from "next/font/google"
 
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@workspace/ui/lib/utils"
+import { cn } from "@/lib/utils"
 
 const notoSans = Noto_Sans({ subsets: ["latin"], variable: "--font-sans" })
 
