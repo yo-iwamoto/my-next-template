@@ -11,7 +11,6 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@workspace/typescript-config": "workspace:*",
     "oxfmt": "^0.47.0",
     "oxlint": "^1.62.0",
     "turbo": "^2.8.17",
