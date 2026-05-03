@@ -1,0 +1,44 @@
+{
+  "projectName": "my-next-template",
+  "cases": [
+    {
+      "id": "tech-stack",
+      "input": {
+        "prompt": "このプロジェクトで使われている主要な技術スタックを教えてください。"
+      },
+      "expected": {
+        "keywords": ["Next.js", "TypeScript", "React", "Tailwind"],
+        "referenceAnswer": "このプロジェクトは Next.js と TypeScript をベースとしたウェブアプリケーションテンプレートです。React 19 を使用し、UI コンポーネントには shadcn/ui や Radix UI が含まれます。スタイリングは Tailwind CSS で行います。"
+      },
+      "metadata": {
+        "description": "基本的な技術スタックについての質問"
+      }
+    },
+    {
+      "id": "monorepo-structure",
+      "input": {
+        "prompt": "このリポジトリのモノレポ構成について説明してください。"
+      },
+      "expected": {
+        "keywords": ["pnpm", "Turborepo", "apps", "workspace"],
+        "referenceAnswer": "このリポジトリは pnpm ワークスペースと Turborepo を使ったモノレポ構成です。apps/web ディレクトリに Next.js アプリが含まれています。ルートには共有の tsconfig.json と turbo.json が置かれています。"
+      },
+      "metadata": {
+        "description": "モノレポ構成に関する質問"
+      }
+    },
+    {
+      "id": "dev-toolchain",
+      "input": {
+        "prompt": "このプロジェクトで使われているリントツールとフォーマッターを教えてください。"
+      },
+      "expected": {
+        "keywords": ["oxlint", "oxfmt"],
+        "referenceAnswer": "リントには oxlint、フォーマットには oxfmt を使用しています。どちらも Rust 製の高速ツールです。"
+      },
+      "metadata": {
+        "description": "開発ツールチェーンについての質問"
+      }
+    }
+  ]
+}

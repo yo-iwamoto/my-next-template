@@ -1,0 +1,13 @@
+{
+  "name": "@my-next-template/evals",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "eval": "braintrust eval --env-file=.env --external-packages=@anthropic-ai/claude-agent-sdk case/**/eval.ts"
+  },
+  "devDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.126",
+    "autoevals": "^0.0.132",
+    "braintrust": "^3.9.0",
+    "typescript": "5.9.3"
+  }
+}
