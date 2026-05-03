@@ -1,0 +1,6 @@
+{
+  "env": {
+    "TRACE_TO_BRAINTRUST": "true",
+    "BRAINTRUST_CC_PROJECT": "my-next-template"
+  }
+}
